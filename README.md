@@ -3,7 +3,7 @@
 <h1 style="font-size:36px;">Analyzing Rainbow Six Siege</h1>
 <h4>
 Charles Liu, Jules Iglesia</h4>
-<hr style="height:2px" /hr>
+<hr style="height:2px"> </hr>
 </center>
 <h2>
 Introduction</h2>
