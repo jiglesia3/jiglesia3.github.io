@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
@@ -18497,3 +18498,6 @@ CCGECDBJvkIIIUSASfIVQgghAkySrxBCCBFg/w9UWvyYhg9N8QAAAABJRU5ErkJggg==
 
 
 </html>
+=======
+# jiglesia3.github.io
+>>>>>>> d9c81a48f732c88bf13738b472d1421608db669d
