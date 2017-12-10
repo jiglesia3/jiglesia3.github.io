@@ -8451,15 +8451,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11233,7 +11233,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11676,7 +11676,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11730,14 +11730,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -11782,17 +11782,17 @@ div#notebook {
 Charles Liu, Jules Iglesia</h4></p>
 <p><hr></p>
 <p><h1>Introduction</h1>
-&lt;/center&gt;</p>
+</center></p>
 <body><p>
-Rainbow Six Siege (R6S) is a MMORTG (Massively Multiplayer Online Real Time Strategy) first-person shooter game developed by Ubisoft. Released in December 2015, Siege only recently gained popularity and boasts 2.3 million players daily with over 25 million registered users. The premise of the game is simple: each game consists of two teams of 5 players, with one team labeled as the Attackers and one as the Defenders. Attackers are assigned a goal depending on the game mode, which ranges from extracting a hostage from a building or planting/detonating a bomb in a building. Each game consists of best of 5 or 7 rounds played in a random map used for all rounds, with each round ending if the Attackers objective is completed within a timeframe, time runs out, or all members of one side are eliminated. Players currently can choose from 68 maps, 36 unique operators, and several loadouts (primary weapon, secondary weapon, etc.) to use. *Full details can be found <a href="https://rainbow6.ubisoft.com/siege/en-us/game-info/index.aspx">here</a>. 
+Rainbow Six Siege (R6S) is a MMORTG (Massively Multiplayer Online Real Time Strategy) first-person shooter game developed by Ubisoft. Released in December 2015, Siege only recently gained popularity and boasts 2.3 million players daily with over 25 million registered users. The premise of the game is simple: each game consists of two teams of 5 players, with one team labeled as the Attackers and one as the Defenders. Attackers are assigned a goal depending on the game mode, which ranges from extracting a hostage from a building or planting/detonating a bomb in a building. Each game consists of best of 5 or 7 rounds played in a random map used for all rounds, with each round ending if the Attackers objective is completed within a timeframe, time runs out, or all members of one side are eliminated. Players currently can choose from 68 maps, 36 unique operators, and several loadouts (primary weapon, secondary weapon, etc.) to use. *Full details can be found <a href="https://rainbow6.ubisoft.com/siege/en-us/game-info/index.aspx">here</a>.
 <p>
 On June 27, 2017, a Game Intelligence Analyst on the Ubisoft R6S Development Team released datasets covering various metrics from in-game data. Along with this <a href="https://rainbow6.ubisoft.com/siege/en-us/news/152-293696-16/introduction-to-the-data-peek-velvet-shell-statistics">data release</a>, he revealed that analysts at Ubisoft work with several different teams and play an important role in the overall development of the game. Given the interesting statistics they were able to find, the Development Team decided to release some in-game data as a way to allow members of the community to conduct some of their own data analyses.
-<p> 
-In this tutorial, our goal is to tidy the in-game data given to us, provide valuable insight into which operators are the most successful in terms of win rate/kill-death ratio, and predict these win/kill-death ratios when a certain character is chosen in different situations. Operators are fundamentally different since each operator has a unique gadget or ability for use in each round. These range from being able to heal teammates to setting up traps around the map. For readers unfamiliar with this game, we hope this analysis will make them interested in trying out Rainbow Six Siege and provide some evidence on which operators are best to pick starting out as a new player. For experienced players, we hope to show interesting unknown statistics and maybe even give them new things to try when they play. 
+<p>
+In this tutorial, our goal is to tidy the in-game data given to us, provide valuable insight into which operators are the most successful in terms of win rate/kill-death ratio, and predict these win/kill-death ratios when a certain character is chosen in different situations. Operators are fundamentally different since each operator has a unique gadget or ability for use in each round. These range from being able to heal teammates to setting up traps around the map. For readers unfamiliar with this game, we hope this analysis will make them interested in trying out Rainbow Six Siege and provide some evidence on which operators are best to pick starting out as a new player. For experienced players, we hope to show interesting unknown statistics and maybe even give them new things to try when they play.
 <hr>
 <center><h1>Getting Started with the Data</h1></center>
 <body><p>
-We make use of Python 3 along with a few imported libraries: <a href="https://pandas.pydata.org/pandas-docs/stable/">pandas</a>, <a href="https://docs.scipy.org/doc/numpy/user/">numpy</a>, <a href="https://matplotlib.org/contents.html">matplotlib</a>, <a href="http://scikit-learn.org/stable/documentation.html">scikit-learn</a>, <a href="https://seaborn.pydata.org/">seaborn</a>, and more. 
+We make use of Python 3 along with a few imported libraries: <a href="https://pandas.pydata.org/pandas-docs/stable/">pandas</a>, <a href="https://docs.scipy.org/doc/numpy/user/">numpy</a>, <a href="https://matplotlib.org/contents.html">matplotlib</a>, <a href="http://scikit-learn.org/stable/documentation.html">scikit-learn</a>, <a href="https://seaborn.pydata.org/">seaborn</a>, and more.
 </body>
 </div>
 </div>
@@ -13999,11 +13999,11 @@ hBBCCCGkl6AOHiGEEEIIIYT0EtTBI4QQQgghhJBe4n/jtYuGiFuxcwAAAABJRU5ErkJggg==
 For Attacker Operators, it appears there is a positive relationship between getting more kills than deaths and winning comparitively more often. The plot above illustrates how certain operators in the Attacker role have a better shot at winning rounds because they are able to get more kills during these rounds.</p>
 <p><p>
 The operator GIGN-MONTAGNE is shown to have the lowest kill-death ratio and would fall in the lower tier for win rate. The plot also shows how the five RESERVE operators all struggle to win and have lower kill-death ratios in comparison to most operators. For experienced players, this makes sense since these 'default' operators do not have the special gadgets, sights, or tools that are made available to the other operators - there's a clear disadvantage in choosing to play as a RESERVE (this is actually supported with a plot further down this tutorial).</p>
-<p><p> 
+<p><p>
 On the positive side, SAT-HIBANA has the highest win-rate out of these operators and is one of just four operators to have a kill-death ratio above 1.0 and a win-rate that high (above 0.48). SPETSNAZ-GLAZ has the highest kill-death ratio for Attackers.</p>
 <p><p>
 For Defender Operators, the corresponding plot above also shows a positive relationship between kill-death ratio and win ratio. The scales for each axis are slightly different when compared to the Attacker operator plot with win ratio getting close to 0.56 and kill-death ratio staying above 0.65. 12 out of the 20 Defender operators also have kill-death ratios above 0.9 with 0.52 as the lower bound for win ratios for those operators. In contrast, 10 out of the 20 Attacker operators are above a 0.9 kill-death ratio, but all 10 fall below 0.49 for win ratio (0.47 being the lower bound for this group).</p>
-<p><p> 
+<p><p>
 For the same reasons mentioned earlier, the RESERVEs clearly struggle as Defenders as well. JTF2-FROST has the highest overall win-rate across Defender operators and GSG9-JAGER has the highest kill-death ratio.</p>
 <p><h2> Graphing Picks and Win Ratios by Rank </h2></p>
 <ul>
@@ -19018,7 +19018,7 @@ EolEIpFIJJL7ENmYk0gkEolEIpFIJJL7kP8POgqr2GgJc/AAAAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><p>
 With these standardized results, we can show which operators are more commonly or less commonly chosen at each rank. At first glance of the Attacker plot above, we can see two operators go in completely opposite directions as we progress in rank. SPETSNAZ-FUZE is at its peak in terms of number of picks in the Unranked stages but as the players get more skilled and compete in higher ranks, this operator seems to be a much less popular choice. SWAT-ASH, on the other hand, is the most popular choice in Silver through Diamond, where it is most evident by far. SPETSNAZ-GLAZ is the second most popular pick in Copper, but he begins to dip a bit in the higher ranks. Several of the other operators do not fluctuate too much as seen in the plot.</p>
-<p><p> 
+<p><p>
 One thing worth noting is how uncommon it is for players to play as the default RESERVE operators. They are consistently at the bottom for each rank and their standardized pick values are under -1.</p>
 <p><p>
 We can analyze similar trends for the Defender operators. GIGN-ROOK is interestingly a very common pick in Unranked rounds - he is still a relatively common pick at higher ranks, but his standardized value in Unranked is the highest in the plot. GIGN-DOC is the most popular choice in Copper, but by Diamond, he is with the bottom of the pack. Both GSG9-BANDIT and GSG9-JAGER are picked more often as we progress in rank with a noticeable gap between these two operators and the rest in Diamond.</p>
@@ -24006,7 +24006,7 @@ On the other hand, the Defender operators with the highest win rates include JTF
 <ul>
 <li>Only Objectives data is used</li>
 </ul>
-<p><p> 
+<p><p>
 With all these plots focusing on win rate and number of picks across the board for each operator, we also wanted to explore how well operators perform in regard to win rate based on the map. This is where the Objectives data comes into play to hopefully show which operators are best or worst to use depending on the randomly chosen map for the match.</p>
 
 </div>
@@ -27608,7 +27608,7 @@ What immediately stands out in the Defender heatmap is how these operators seem 
 <img src="https://ubistatic19-a.akamaihd.net/resource/en-us/game/rainbow6/siege/r6-game-info-map-consulate-01_211993.jpg" alt="Drawing" style="width: 700px;"/></p>
 <p><hr></p>
 <p><h1> Predicting Win Ratio </h1>
-&lt;/center&gt;</p>
+</center></p>
 <p><p>
 In this last section, the focus will be on developing a model that can accurately predict the win percentage of a round. There's a variety of prediction models we could use, but given the amount of different categories we have for each operator, rank, and map, we will solely focus on linear regression.</p>
 <p><p>
@@ -27765,15 +27765,15 @@ First is the Operators data, in which we will use the ops_by_rank dataframe crea
 <span class="k">for</span> <span class="n">role</span><span class="p">,</span> <span class="n">tbl</span> <span class="ow">in</span> <span class="n">ops_df_role</span><span class="p">:</span>
     <span class="n">X</span> <span class="o">=</span> <span class="n">tbl</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;win_ratio&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">tbl</span><span class="p">[</span><span class="s1">&#39;win_ratio&#39;</span><span class="p">]</span>
-    
+
     <span class="c1"># Split data into Train and Test</span>
     <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">model_selection</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=.</span><span class="mi">3</span><span class="p">)</span>
     <span class="n">X_train</span><span class="p">[</span><span class="s1">&#39;win_ratio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_train</span>
-    
+
     <span class="c1"># Fit the Linear Regression on Train split</span>
     <span class="n">lr</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s1">&#39;win_ratio ~ C(skillrank) + C(operator) + kd_ratio&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">X_train</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
     <span class="n">models</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lr</span><span class="p">)</span>
-    
+
     <span class="c1"># Predict using Test split</span>
     <span class="n">preds_lr</span> <span class="o">=</span> <span class="n">lr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 
@@ -29608,15 +29608,15 @@ Defender Model - Calculated F-Statistic: 1.64325726998 F-Value: 13784.0049579 P-
 <span class="k">for</span> <span class="n">role</span><span class="p">,</span> <span class="n">tbl</span> <span class="ow">in</span> <span class="n">obj_df_role</span><span class="p">:</span>
     <span class="n">X</span> <span class="o">=</span> <span class="n">tbl</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;win_ratio&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">tbl</span><span class="p">[</span><span class="s1">&#39;win_ratio&#39;</span><span class="p">]</span>
-    
+
     <span class="c1"># Split data into Train and Test</span>
     <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">model_selection</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=.</span><span class="mi">3</span><span class="p">)</span>
     <span class="n">X_train</span><span class="p">[</span><span class="s1">&#39;win_ratio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_train</span>
-    
+
     <span class="c1"># Fit the Linear Regression on Train split</span>
     <span class="n">lr</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s1">&#39;win_ratio ~ C(mapname) + C(gamemode) + C(skillrank) + C(operator) + kd_ratio&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">X_train</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
     <span class="n">models_obj</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lr</span><span class="p">)</span>
-    
+
     <span class="c1"># Predict using Test split</span>
     <span class="n">preds_lr</span> <span class="o">=</span> <span class="n">lr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 
@@ -31099,7 +31099,7 @@ Defender Model - Calculated F-Statistic: 1.37744541983 F-Value: 2099.29378257 P-
   </div>
 </body>
 
- 
+
 
 
 </html>
